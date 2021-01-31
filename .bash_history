@@ -438,3 +438,18 @@ chkconfig --list [name]
 chkconfig --list 
 chkconfig --list rhnsd
 chkconfig --list jenkins
+c
+cd
+cd /var/lib/jenkins/workspace/
+ll
+cd docker-prod/
+ll
+docker build -t kishanshah123-${JOB_NAME}:${BUILD_NUMBER} .
+docker build -t kishanshah123 .
+passwd root
+vi /etc/ssh/sshd_config 
+service restart sshd
+systemctl restart sshd
+chmod 777 /var/lib/jenkins/
+chmod 777 /var/lib/jenkins/workspace/
+chmod 777 /var/lib/jenkins/workspace/docker-prod/
