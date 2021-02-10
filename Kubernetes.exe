@@ -1,0 +1,294 @@
+    1  cd
+    2  ls -la
+    3  cd .ssh
+    4  ll
+    5  cat authorized_keys 
+    6  passwd root
+    7  cat authorized_keys 
+    8  vi /etc/ssh/sshd_config 
+    9  service sshd restart
+   10  cat authorized_keys 
+   11  cd
+   12  mkdir test
+   13  ll
+   14  chmod u+S test
+   15  chmod u+s test
+   16  ll
+   17  chmod o-x test
+   18  ll
+   19  umask
+   20  cd
+   21  clear
+   22  cd
+   23  vi kishan
+   24  grep -n kishan 
+   25  grep -n df kishan 
+   26  grep  df kishan 
+   27  grep -n ^$ kishan 
+   28  grep  ^$ kishan 
+   29  grep  ^$ kishan | wc -l
+   30  grep -v  ^$ kishan 
+   31  grep -v  ^$ kishan | wc -l
+   32  ll
+   33  ls -la
+   34  alias l="ls -la"
+   35  l
+   36  alias
+   37  unalias l
+   38  l
+   39  alias l="ls -la"
+   40  l
+   41  alias
+   42  unalias l
+   43  l
+   44  vi kishan.sh
+   45  bash kishan.sh 
+   46  vi kishan.sh
+   47  bash kishan.sh 
+   48  cat kishan.sh 
+   49  rm -rf kishan
+   50  vi kishan.sh
+   51  bash kishan.sh 
+   52  vi kishan.sh
+   53  bash kishan.sh 
+   54  cat kishan.sh 
+   55  vi kishan.sh
+   56  bash kishan.sh 
+   57  cat age.txt 
+   58  vi kishan.sh 
+   59  cat age.txt 
+   60  bash kishan.sh 
+   61  cat age.txt 
+   62  rm -rf age.txt 
+   63  bash kishan.sh 
+   64  cat kishan.sh 
+   65  cat age.txt 
+   66  vi kishan.sh 
+   67  bash kishan.sh 
+   68  bash kishan.sh 
+   69  bash kishan.sh 
+   70  cat kishan.sh 
+   71  vi kishan.sh 
+   72  vi kishan.sh 
+   73  bash kishan.sh 
+   74  vi kishan.sh 
+   75  cd
+   76  cd
+   77  ll
+   78  ps aux
+   79  ps aux > test.txt
+   80  awk '{print $1}' test.txt 
+   81  cat test.txt 
+   82  awk '/I/ {print $1}' test.txt 
+   83  awk '/I/ {print $0}' test.txt 
+   84  awk '{print $1}' test.txt 
+   85  cat test.txt 
+   86  awk '$7 ~/?/ {print $0}' test.txt 
+   87  awk '$7 /?/ {print $0}' test.txt 
+   88  awk '$7 ~/?/ {print $0}' test.txt 
+   89  cat test.txt 
+   90  awk '$2 <20 {print $0}' test.txt 
+   91  cd
+   92  cat /etc/resolv.conf 
+   93  echo $?
+   94  cat /etc/xyz
+   95  echo $?
+   96  vi 1.sh
+   97  bash 1.sh 
+   98  cat 1.sh 
+   99  vi 1.sh 
+  100  bash 1.sh 
+  101  vi 1.sh 
+  102  vi 1.sh 
+  103  bash 1.sh 
+  104  vi 1.sh 
+  105  cd
+  106  ll
+  107  openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
+  108  openssl x509 -text -noout -in certificate.pem
+  109  ll
+  110  rm -rf *
+  111  ll
+  112  openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
+  113  openssl x509 -text -noout -in certificate.pem
+  114  ll
+  115  cd
+  116  ll
+  117  cat key.pem 
+  118  cat certificate.pem 
+  119  yum install docker
+  120  cd
+  121  uname -a
+  122  uname -m
+  123  wget https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip
+  124  ll
+  125  tar -xvf terraform_0.14.6_linux_amd64.zip 
+  126  ll
+  127  ll
+  128  unzip terraform_0.14.6_linux_amd64.zip 
+  129  ll
+  130  rm -rf terraform_0.14.6_linux_amd64.zip 
+  131  ll
+  132  cat terraform 
+  133  clear
+  134  ll
+  135  ll
+  136  pwd
+  137  cd ..
+  138  ll
+  139  ls -la
+  140  cd root/
+  141  ll
+  142  ls -la
+  143  cat .bash_profile 
+  144  ll
+  145  pwd
+  146  export PATH=/root/terraform:$PATH
+  147  cat .bash_profile 
+  148  env
+  149  pwd
+  150  ll
+  151  terrform -v
+  152  terrform -version
+  153  ll
+  154  env 
+  155  cd
+  156  ll
+  157  echo $PATH
+  158  mv terraform /usr/bin/
+  159  ll
+  160  terraform -v
+  161  cd
+  162  curl -Lo kops https://github.com/kubernetes/kops/releases/
+  163  download/$(curl -s https://api.github.com/repos/kubernetes/kops/
+  164  releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  165  download/$(curl -s https://api.github.com/repos/kubernetes/kops/
+  166  releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  167  curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  168  ll
+  169  chmod +x ./kops
+  170  mv ./kops /usr/local/bin/
+  171  ll
+  172  curl -Lo kubectl https://storage.googleapis.com/kubernetesrelease/release/$(curl -s https://storage.googleapis.com/kubernetesrelease/release/stable.txt)/bin/linux/amd64/kubectl
+  173  ll
+  174  chmod +x ./kubectl
+  175  mv ./kubectl /usr/local/bin/kubectl
+  176  ll
+  177  pip install awscli
+  178  apt-get install python-pip
+  179  yum install python-pip
+  180  pip install awscli
+  181  sudo pip install awscli
+  182  aws
+  183  aws configure
+  184  ll
+  185  ls -lrt
+  186  cd ..
+  187  ll
+  188  cd root/
+  189  lll
+  190  ll
+  191  ls -lrt ~/.aws/
+  192  cd
+  193  kubectl
+  194  yum install kubectl
+  195  kops
+  196  ll
+  197  curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-darwin-amd64
+  198  ll
+  199  chmod +x ./kops
+  200  mv ./kops /usr/local/bin/
+  201  kops
+  202  curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  203  ll
+  204  chmod +x ./kops
+  205  mv ./kops /usr/bin/
+  206  kops 
+  207  kops -v
+  208  curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  209  chmod +x ./kops
+  210  mv ./kops /usr/local/bin/
+  211  curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  212  chmod +x ./kubectl
+  213  sudo mv ./kubectl /usr/local/bin/kubectl
+  214  pip install awscli
+  215  kops 
+  216  kops --help
+  217  kops -h
+  218  kops --h
+  219  curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  220  ll
+  221  chmod +x kops-linux-amd64
+  222  ll
+  223  mv kops-linux-amd64 /usr/local/bin/kops
+  224  kops 
+  225  kubectl
+  226  kubectl
+  227  curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  228  chmod +x ./kubectl
+  229  mv ./kubectl /usr/bin/
+  230  ll
+  231  kubectl 
+  232  curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  233  chmod +x ./kops
+  234  ll
+  235  mv ./kops /usr/bin/
+  236  kops 
+  237  lll
+  238  ll
+  239  mv ./kops /usr/bin/
+  240  kops 
+  241  chmod +x ./kops
+  242  ssh-keygen 
+  243  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kishan.kubernetes.com
+  244  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kubernetes.com
+  245  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kubernetes.k8.local
+  246  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kishan.k8.local
+  247  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kishan.k8s.local
+  248  clear
+  249  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kishan.k8s.local
+  250  kops update cluster
+  251  kops update cluster kishan.k8s.local
+  252  kops validate cluster
+  253  kops validate cluster --name kishan.k8s.local
+  254  kops delete cluster --name kishan.k8s.local --yes
+  255  kops validate cluster --name kishan.k8s.local --state=s3://k8-storage
+  256  kops delete cluster --name kishan.k8s.local --yes
+  257  kops delete cluster --name kishan.k8s.local --state=s3://k8-storage
+  258  kops delete cluster --name kishan.k8s.local --state=s3://k8-storage --yes
+  259  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kishan.k8s.local
+  260  kops delete cluster --name kishan.k8s.local --state=s3://k8-storage --yes
+  261  aws configure
+  262  ll
+  263  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kubernetes.com
+  264  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b,us-east-1c --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kubernetes.k8s.local
+  265  kops delete cluster --name kishan.k8s.local --state=s3://k8-storage --yes
+  266  kops delete cluster --name kubernetes.k8s.local --state=s3://k8-storage --yes
+  267  curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  268  ll
+  269  rm -rff kops-linux-amd64 
+  270  curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+  271  ll
+  272  chmod +x kops-linux-amd64
+  273  mv ./kops-linux-amd64 kops
+  274  mv ./kops /usr/bin/
+  275  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kubernetes.k8s.local
+  276  kops delete cluster --name kubernetes.k8s.local --state=s3://k8-storage --yes
+  277  aws configure
+  278  aws
+  279  kops create cluster --yes --state=s3://k8-storage --zones=us-east-1a,us-east-1b --node-count=2 --node-size=t2.micro --master-size=t2.micro --name=kubernetes.k8s.local
+  280  kops validate cluster
+  281  kops validate cluster --state=s3://k8-storage
+  282  kops validate cluster --state=s3://k8-storage
+  283  kops validate cluster --state=s3://k8-storage
+  284  kubectl get nodes
+  285  kops validate cluster --state=s3://k8-storage
+  286  kops validate cluster --state=s3://k8-storage
+  287* 
+  288  kubectl get node
+  289  kops delete cluster --name kubernetes.k8s.local --state=s3://k8-storage --yes
+  290  history
+  291  which git
+  292  rpm -q git
+  293  yum install git
+  294  history > Kubernetes.exe
